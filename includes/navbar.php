@@ -8,7 +8,7 @@
                 <a class="nav-link" href="gallery.php">Galerija</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="gallery.php">O nama</a>
+                <a class="nav-link" href="about.php">O nama</a>
             </li>
         </ul>
         <ul class="nav navbar-nav flex-fill justify-content-center">

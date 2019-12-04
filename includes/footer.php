@@ -76,3 +76,6 @@
     <!-- Copyright -->
 
 </footer>
+
+<script src="assets/lib/jquery/dist/jquery.js"> </script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"> </script>
