@@ -7,6 +7,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="gallery.php">Galerija</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.php">O nama</a>
+            </li>
         </ul>
         <ul class="nav navbar-nav flex-fill justify-content-center">
             <li class="nav-item"><a class="navbar-brand" href="#"> <img src="assets/images/players.png" content="logo" height="70px"> </a></li>
