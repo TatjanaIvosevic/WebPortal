@@ -4,13 +4,14 @@
     <div class="container">
         <div class="row my-5">
             <div class="col-sm-12">
-                <!-- FIRST CARD -->
+                <!-- CARD -->
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 text-center mt-md-2">
                                 <h3 class="text-uppercase">Ovde možete pogledati sve slike naših terena</h3>
                             </div>
+                            <!-- CAROUSEL -->
                             <div class="col-sm-12 mt-md-2">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
@@ -60,6 +61,7 @@
     <?php include_once "includes/footer.php"; ?>
     </body>
 
+<!-- JAVASCRIPT FOR CAROUSEL -->
 <script>
     $('.carousel').carousel({
         interval: 3000

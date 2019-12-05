@@ -14,13 +14,13 @@
                             <div class="col-sm-12 col-md-4 offset-md-4 text-center mt-5">
                                 <img class="img-responsive" src="assets/images/basketball.png" alt="basketball" width="100%">
                             </div>
-                            <div class="col-sm-12 text-center">
+                           <div class="col-sm-12 text-center">
                                 <p>U nastavku pročitajte ko smo to mi i šta nam je cilj...</p>
                                 <p>Mi smo studenti Visoke Tehničke škole strukovnih studija u Subotici. 🎓 </p>
                                 <p>Ovim sajtom trudimo se da olakšamo pronalazak novih terena za igru, svim ljubiteljima košarke i basketa. 🏀 </p>
                                 <p>Cilj nam je da prikažemo sve terene u Subotici, koje vi na osnovu vašeg ličnog iskustva možete oceniti i tako dati "feedback", ostalim igračima. 💪 </p>
                                 <p>Sajt je napravljen u okviru školskog projekta iz predmeta Elektonsko poslovanje i Emobil. 📚 </p>
-                            </div>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- BUTTON -->
                 <div class="text-center">
                     <p>Ne gubi vreme</p>
                 </div>
@@ -78,5 +78,5 @@
             </div>
         </div>
     </div>
-</body>
 <?php include_once "includes/footer.php"; ?>
+</body>
