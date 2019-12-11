@@ -54,10 +54,10 @@
                         <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a target="_blank" href="https://www.instagram.com/jervolimobasket/?hl=sr"><i class="fab fa-instagram"></i> Instagram</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=jSZlwBThW7o"><i class="fab fa-youtube"></i> YouTube</a>
                     </li>
                 </ul>
 
