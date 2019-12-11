@@ -19,7 +19,7 @@
                 <a class="nav-link" href="fields.php">Tereni i sportski centri</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="addfield.php">Dodaj teren</a>
+                <a class="nav-link" href="addfieldregistration.php">Dodaj teren</a>
             </li>
         </ul>
     </div>
