@@ -1,4 +1,6 @@
-<?php include_once "includes/header.php"; ?>
+<?php include_once "includes/header.php";
+    require_once "db_config.php";
+?>
     <body>
     <?php include_once "includes/navbar.php"; ?>
     <div class="container">
@@ -15,32 +17,39 @@
                             <div class="col-sm-12 mt-md-2">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        <?php
+                                        $sql = "SELECT * FROM field";
+                                        $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+                                        $results= mysqli_fetch_all($query,MYSQLI_ASSOC);
+
+                                        for($i=0; $i<count($results);$i++){
+                                            if ($i == 0){
+                                                echo "<li class='active' data-target=\"#carouselExampleIndicators\" data-slide-to=\"$i\"></li>";
+                                            } else {
+                                                echo "<li data-target=\"#carouselExampleIndicators\" data-slide-to=\"$i\"></li>";
+                                            }
+                                        }
+                                        ?>
                                     </ol>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="assets/images/heart.png" alt="First slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>...</h5>
-                                                <p>...</p>
+                                        <?php
+                                        $counter = 0;
+                                        foreach($results as $result){
+                                            if($counter == 0){
+                                                echo "<div class=\"active carousel-item\">";
+                                            } else {
+                                                echo "<div class=\"carousel-item\">";
+                                            }
+                                            ?>
+                                                <img class="d-block w-100" src="<?= $result["image"] ?>" alt="First slide">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5><?= $result["title"]?></h5>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="assets/images/heart.png" alt="Second slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>...</h5>
-                                                <p>...</p>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="assets/images/heart.png" alt="Third slide">
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h5>...</h5>
-                                                <p>...</p>
-                                            </div>
-                                        </div>
+                                            <?php
+                                            $counter++;
+                                        }
+                                        ?>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

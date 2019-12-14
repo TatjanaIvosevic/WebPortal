@@ -45,7 +45,6 @@ require_once 'db_config.php';
     </form>
     <!--Select the name or path of the image which you have stored in the database table and use it in the image source.-->
     <?php
-
         $sql = "select name from images where id=1";
         $result = mysqli_query($con,$sql);
         $row = mysqli_fetch_array($result);
