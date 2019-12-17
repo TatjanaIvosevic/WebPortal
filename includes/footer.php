@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer bg-dark pt-4" style="position: absolute; width: 100%; margin-top: -10px;">
+<footer class="page-footer bg-dark pt-4 <?= $bottom ?? ''?>" style="position: absolute; width: 100%; margin-top: -10px;">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
@@ -27,16 +27,19 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="index.php"><i class="fa fa-home"></i>Početna</a>
+                        <a class="text-light" href="index.php"><i class="fa fa-home"></i> Početna </a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-carrot"></i>Galerija</a>
+                        <a class="text-light" href="about.php"><i class="far fa-address-card"></i> O nama </a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-info"></i>Tereni i sportski centri</a>
+                        <a class="text-light" href="gallery.php"><i class="far fa-image"></i> Galerija </a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-mail-bulk">Dodaj teren</i></a>
+                        <a class="text-light" href="fields.php"><i class="fas fa-basketball-ball"></i> Tereni i sportski centri </a>
+                    </li>
+                    <li>
+                        <a class="text-light" href="registration.php"><i class="fas fa-plus"></i> Dodaj teren </i></a>
                     </li>
                 </ul>
 
@@ -51,13 +54,13 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a class="text-light" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/jervolimobasket/?hl=sr"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a class="text-light" target="_blank" href="https://www.instagram.com/jervolimobasket/?hl=sr"><i class="fab fa-instagram"></i> Instagram</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=jSZlwBThW7o"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a class="text-light" target="_blank" href="https://www.youtube.com/watch?v=jSZlwBThW7o"><i class="fab fa-youtube"></i> YouTube</a>
                     </li>
                 </ul>
 
