@@ -30,13 +30,13 @@
                         <a href="index.php"><i class="fa fa-home"></i>Početna</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-carrot"></i>Galerija</a>
+                        <a href="gallery.php"><i class="fa fa-carrot"></i>Galerija</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-info"></i>Tereni i sportski centri</a>
+                        <a href="fields.php"><i class="fa fa-info"></i>Tereni i sportski centri</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-mail-bulk">Dodaj teren</i></a>
+                        <a href="addfield.php"><i class="fa fa-mail-bulk">Dodaj teren</i></a>
                     </li>
                 </ul>
 

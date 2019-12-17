@@ -15,3 +15,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.col-4 col-md-4 col-xl-4{
+    color: orange;
+}
