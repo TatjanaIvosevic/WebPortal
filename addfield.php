@@ -1,4 +1,7 @@
-<?php require "db_config.php"; ?>
+<?php
+require "db_config.php";
+if(isset($_SESSION))
+?>
 <?php include_once "includes/header.php"; ?>
 <body>
 <?php include_once "includes/navbar.php"; ?>

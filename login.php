@@ -39,10 +39,6 @@
                                                     <input type="password" class="form-control" name="password" id="exampleDropdownFormPassword1" placeholder="Sifra" maxlength="20" minlength="5" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleDropdownFormPassword1">Ponovi svoju lozinku:</label>
-                                                    <input type="password" class="form-control" name="repeat_password" id="exampleDropdownFormPassword2" placeholder="Potvrdi sifru" maxlength="20" minlength="5" required>
-                                                </div>
-                                                <div class="form-group">
                                                     <div class="form-check">
                                                         <input type="checkbox" class="form-check-input" id="dropdownCheck">
                                                         <label class="form-check-label" for="dropdownCheck">
@@ -50,24 +46,22 @@
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Registruj se</button>
+                                                <button type="submit" class="btn btn-primary">Uloguj se</button>
                                                 <?php
-                                                if(isset($_GET['error'])){
+                                                if(isset($_GET['error'])) {
                                                     $error = $_GET['error'];
-                                                    if($error == 'usernameExists')
-                                                        echo 'Username already exists';
-                                                    if($error == 'empty')
-                                                        echo 'Please fill out all fields';
-                                                    if($error == 'usernameIncorrect')
-                                                        echo 'Your username is incorrect';
+                                                    if($error == 'username') {
+                                                        echo 'Username is incorrect';
+                                                    }
+                                                    if($error == 'password') {
+                                                        echo 'Password is incorrect';
+                                                    }
                                                 }
                                                 ?>
                                             </form>
                                             <div class="dropdown-divider"></div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <a class="dropdown-item" href="#">Novi korisnik? Registruj se</a>
-                                            <a class="dropdown-item" href="#">Zaboravio/la si lozinku?</a>
+                                        <a class="dropdown-item" href="#">Zaboravio/la si lozinku?</a>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +74,7 @@
     </div>
 </div>
 <?php
-    $bottom = 'fixed-bottom';
-    include_once "includes/footer.php";
+$bottom = 'fixed-bottom';
+include_once "includes/footer.php";
 ?>
 </body>
