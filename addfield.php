@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12 text-center mt-md-2">
-
+                           <!-- ADD IMAGE -->
                             <form method="POST" enctype="multipart/form-data">
                                 <input type="file" name="image">
                                 <input type="submit" name="submit" value="upload">

@@ -29,7 +29,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="px-4 py-3">
+                                            <form class="px-4 py-3" method="post" action="">
                                                 <div class="form-group">
                                                     <label for="exampleDropdownFormEmail1">Unesi svoju "e-mail" adresu ili "username":</label>
                                                     <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
