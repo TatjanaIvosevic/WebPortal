@@ -24,6 +24,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION['id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
 
-    header('Location: index.php');
+    header('Location: addfield.php');
     exit;
 }

@@ -20,7 +20,7 @@ require_once "db_config.php"; ?>
                             <div class="card-body">
                                 <h5 class="card-title"><?= $result['title'] ?></h5>
                                 <p class="card-text"><?= $result['description'] ?></p>
-                                <p class="card-text"><a href="https://www.google.com/maps?q=<?= $result['latitude']?>,<?= $result['longitude']?>" target="_blank">Klikni na lokaciju</a></p>
+                                <p class="card-text"><a class="text-warning" href="https://www.google.com/maps?q=<?= $result['latitude']?>,<?= $result['longitude']?>" target="_blank">Klikni da saznaš lokaciju</a></p>
                             </div>
                         </div>
                     </div>

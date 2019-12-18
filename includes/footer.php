@@ -11,7 +11,7 @@
             <div class="col-md-6 mt-md-0 mt-3">
 
                 <!-- Content -->
-                <h5 class="text-uppercase text-light">ŠKOLSKI PROJEKAT</h5>
+                <h5 class="text-uppercase text-warning">ŠKOLSKI PROJEKAT</h5>
                 <p class="text-light">U okviru predmeta elektronsko poslovanje i emobil.</p>
 
             </div>
@@ -23,7 +23,7 @@
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h5 class="text-uppercase text-light">Links</h5>
+                <h5 class="text-uppercase text-warning">Links</h5>
 
                 <ul class="list-unstyled">
                     <li>
@@ -52,7 +52,7 @@
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h5 class="text-uppercase text-light">Društvene mreže</h5>
+                <h5 class="text-uppercase text-warning">Društvene mreže</h5>
 
                 <ul class="list-unstyled">
                     <li>
@@ -76,7 +76,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 text-light bg-secondary ">© <?= date('Y') ?> Copyright: VTS
+    <div class="footer-copyright text-center py-3 text-warning bg-secondary ">© <?= date('Y') ?> Copyright: VTS
     </div>
     <!-- Copyright -->
 

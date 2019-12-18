@@ -29,7 +29,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="px-4 py-3" method="post" action="register_inc.php">
+                                            <form class="px-4 py-3" method="post" action="registration_inc.php">
                                                 <div class="form-group">
                                                     <label for="exampleDropdownFormEmail1">Unesi svoj "username":</label>
                                                     <input type="text" class="form-control" name="Username" id="exampleDropdownFormEmail1" placeholder="Korisničko ime" maxlength="20" minlength="2" required>

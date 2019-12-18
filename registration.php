@@ -14,8 +14,8 @@
                             <p>Samo registrovani korisnici smeju da dodaju terene.</p>
                             <p>Zato popuni jednostavnu formu i uživaj u pogodnostima, koje ti nudimo kao registrovanom korisniku ili se pak uloguj sa postojećim nalogom.</p>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">
-                                Uloguj se
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#registrationModal">
+                                Registruj se
                             </button>
 
                             <!-- MODAL -->
@@ -23,13 +23,13 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="registrationModalLabel">Log in forma</h5>
+                                            <h5 class="modal-title" id="registrationModalLabel">Forma za registraciju</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="px-4 py-3" method="post" action="register_inc.php">
+                                            <form class="px-4 py-3" method="post" action="registration_inc.php">
                                                 <div class="form-group">
                                                     <label for="exampleDropdownFormEmail1">Unesi svoj "username":</label>
                                                     <input type="text" class="form-control" name="Username" id="exampleDropdownFormEmail1" placeholder="Korisničko ime" maxlength="20" minlength="2" required>
@@ -50,7 +50,7 @@
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Registruj se</button>
+                                                <button type="submit" class="btn btn-warning">Registruj se</button>
                                                 <?php
                                                 if(isset($_GET['error'])){
                                                     $error = $_GET['error'];

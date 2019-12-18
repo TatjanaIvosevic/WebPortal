@@ -1,6 +1,12 @@
 <?php
+session_start();
 require "db_config.php";
-if(isset($_SESSION))
+if(!isset($_SESSION['id'])){
+    header('Location: login.php');
+    exit;
+}
+
+echo "Hello ".$_SESSION['username'];
 ?>
 <?php include_once "includes/header.php"; ?>
 <body>

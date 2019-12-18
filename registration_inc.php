@@ -8,27 +8,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-        header('Location: register.php?error=usernameExists');
+        header('Location: registration.php?error=usernameExists');
         exit;
     }
 
     if(empty($username) || empty($pass) || empty($repeat_pass)){
-        header('Location: register.php?error=empty');
+        header('Location: registration.php?error=empty');
         exit;
     }
 
     if (!preg_match('/^[A-Za-z0-9]{2,20}$/', $username)) {
-        header('Location: register.php?error=usernameIncorrect');
+        header('Location: registration.php?error=usernameIncorrect');
         exit;
     }
 
     if($pass != $repeat_pass){
-        header('Location: register.php?password');
+        header('Location: registration.php?password');
         exit;
     }
 
     if (strlen($pass) < 5 || strlen($pass) > 20){
-        header('Location: register.php?passlen');
+        header('Location: registration.php?passlen');
         exit;
     }
 
@@ -41,6 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: login.php');
         exit;
     }
-    header('Location: register.php');
+    header('Location: registration.php');
     exit;
 }
