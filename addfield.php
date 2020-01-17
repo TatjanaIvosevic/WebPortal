@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 require "db_config.php";
 if(!isset($_SESSION['id'])){
@@ -7,6 +8,7 @@ if(!isset($_SESSION['id'])){
 }
 
 echo "Hello ".$_SESSION['username'];
+*/
 ?>
 <?php include_once "includes/header.php"; ?>
 <body>
@@ -20,10 +22,18 @@ echo "Hello ".$_SESSION['username'];
                     <div class="row">
                         <div class="col-sm-12 text-center mt-md-2">
                            <!-- ADD IMAGE -->
-                            <form method="POST" enctype="multipart/form-data">
-                                <input type="file" name="image">
-                                <input type="submit" name="submit" value="upload">
+                            <form action="upload_images.php" method="post" enctype="multipart/form-data">
+                                 Ime terena: <br>
+                                <input type="text" name="courtName" id="courtName" required> <br>
+                                Adresa terena: <br>
+                                <input type="text" name="courtAddress" id="courtAddress" required> <br>
+                                Izaberi sliku:<br>
+                                <input type="file" name="fileToUpload" id="fileToUpload"required><br><br>
+                                <input type="submit" value="Dodaj teren" name="submit">
+
                             </form>
+
+
 
                             <?php
                                 if(isset($_POST['submit'])){

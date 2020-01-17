@@ -56,7 +56,7 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a class="text-light" target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a class="text-light" target="_blank" href="https://www.facebook.com/Jer-Volimo-Basket-106623714214960/?modal=admin_todo_tour"><i class="fab fa-facebook"></i> Facebook</a>
                     </li>
                     <li>
                         <a class="text-light" target="_blank" href="https://www.instagram.com/jervolimobasket/?hl=sr"><i class="fab fa-instagram"></i> Instagram</a>
