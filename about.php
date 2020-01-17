@@ -19,22 +19,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- GOOGLE MAP -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 text-center mt-md-2">
+                            <p> Mapa Subotice sa obeleženim terenima: </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- AUTHORS -->
+            <h2 class="text-center"> Autori sajta: </h2>
             <div class="col-sm-6 col-md-6 col-xl-6 card-body text-center float-left">
                 <img class="img-responsive img-thumbnail" alt="Tatjana Ivošević" src="assets/images/tatjana.jpg">
-                    <p>Tatjana Ivošević - Miss IT
-                    <br>
+                    <p>Tatjana Ivošević - Miss IT<br>
                         <a href="tatjana.ivosevic1@gmail.com" >tatjana.ivosevic1@gmail.com</a>
                     </p>
-
             </div>
             <div class="col-sm-6 col-md-6 col-xl-6 card-body text-center float-right">
                 <img class="img-fluid img-thumbnail" alt="Filip Šuput" src="assets/images/filip.jpg">
-                    <p>Filip Šuput - Baller
-                    <br>
+                    <p>Filip Šuput - Baller<br>
                         <a href="f.suput98@gmail.com" >f.suput98@gmail.com</a>
                     </p>
-
             </div>
         </div>
     </div>

@@ -63,6 +63,7 @@
                                                         echo 'Tvoja e-mail adresa je neispravna.';
                                                     if($error == 'verification')
                                                         echo 'Doslo je do greske... Pokusajte ponovo kasnije';
+
                                                 }
 
                                                 if(isset($_GET['message'])){
