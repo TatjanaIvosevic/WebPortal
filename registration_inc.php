@@ -1,10 +1,14 @@
 <?php
+require_once 'db_config.php';
+require_once 'functions.php';
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = mysqli_real_escape_string($conn,trim($_POST['username']));
+    $email = mysqli_real_escape_string($conn,trim($_POST['email']));
     $pass = mysqli_real_escape_string($conn,trim($_POST['password']));
-    $repeat_pass = mysqli_real_escape_string($conn,trim($_POST['repeat_pass']));
+    $repeat_pass = mysqli_real_escape_string($conn,trim($_POST['repeat_password']));
 
-    $sql = "SELECT * FROM user WHERE username = '$username'";
+    $sql = "SELECT * FROM user WHERE username = '$username' AND email = '$email'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -12,8 +16,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    if(empty($username) || empty($pass) || empty($repeat_pass)){
+    if(empty($username) || empty($email) || empty($pass) || empty($repeat_pass)){
         header('Location: registration.php?error=empty');
+        exit;
+    }
+
+    if (!preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,10})$/', $email)) {
+        header('Location: registration.php?error=emailIncorrect');
         exit;
     }
 
@@ -23,23 +32,36 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if($pass != $repeat_pass){
-        header('Location: registration.php?password');
+        header('Location: registration.php?error=password');
         exit;
     }
 
     if (strlen($pass) < 5 || strlen($pass) > 20){
-        header('Location: registration.php?passlen');
+        header('Location: registration.php?error=passlen');
         exit;
     }
 
     $hashed_pass = password_hash($pass,PASSWORD_DEFAULT);
+    $code = generateRandomString(10);
 
-    $sql = "INSERT INTO user(username, password) VALUES('$username','$hashed_pass')";
+    $sql = "INSERT INTO user(username, email, password, verification_code) VALUES('$username', '$email', '$hashed_pass','$code')";
     $result = mysqli_query($conn,$sql);
 
     if($result){
-        header('Location: login.php');
+        $header = "";
+        $header.="From: ROOT <root@vts.su.ac.rs>\n";
+        $header.="X-Mailer: PHP\n";
+        $header.="X-Priority: 1\n";
+        $header.="Content-Type: text/html; charset=UTF-8\n";
+        $message = "Click the link to verify your account <a href='http://localhost/WebPortal/verification.inc.php?code=$code'>click</a>";
+        $send = mail($email,'Account verification',$message,$header);
+        if($send) {
+            header('Location: registration.php?message=emailVerification');
+            exit;
+        }
+        header('Location: registration.php?error=verification');
         exit;
+
     }
     header('Location: registration.php');
     exit;

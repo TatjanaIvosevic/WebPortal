@@ -10,14 +10,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $result = mysqli_query($conn,$sql);
 
     if (mysqli_num_rows($result) == 0){
-        header('Location: login.php?error=username');
+        header('Location: registration.php#loginModal?error=username');
         exit;
     }
 
     $user = mysqli_fetch_assoc($result);
 
     if(!password_verify($pass,$user['password'])) {
-        header('Location: login.php?error=password');
+        header('Location: registration.php#loginModal?error=password');
         exit;
     }
 

@@ -84,3 +84,12 @@
 
 <script src="assets/lib/jquery/dist/jquery.js"> </script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.js"> </script>
+<?php
+if(isset($_GET['error'])) {
+        ?>
+        <script>
+            $('#registrationModal').modal('show')
+        </script>
+<?php
+    }
+?>
