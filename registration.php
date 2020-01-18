@@ -99,7 +99,7 @@
                                             <form class="px-4 py-3" method="post" action="login_inc.php">
                                                 <div class="form-group">
                                                     <label for="exampleDropdownFormEmail">Unesi svoj "username":</label>
-                                                    <input type="text" class="form-control" name="Username" id="exampleDropdownFormEmail1" placeholder="Korisničko ime" maxlength="20" minlength="2" required>
+                                                    <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail1" placeholder="Korisničko ime" maxlength="20" minlength="2" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleDropdownFormPassword">Unesi svoju lozinku:</label>

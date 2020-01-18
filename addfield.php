@@ -29,7 +29,7 @@ echo "Hello ".$_SESSION['username'];
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="courtAddress">Adresa terena:</label>
+                                    <label for="courtAddress">Opis terena:</label>
                                     <input type="text" class="form-control" name="courtAddress" id="courtAddress" required><br>
                                 </div>
 

@@ -4,7 +4,7 @@ require 'db_config.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $username = mysqli_real_escape_string($conn, trim($_POST['username']));
-    $pass = mysqli_real_escape_string($conn,trim($_POST['password']));
+    $pass= mysqli_real_escape_string($conn,trim($_POST['password']));
 
     $sql = "SELECT * FROM user WHERE username = '$username'";
     $result = mysqli_query($conn,$sql);
