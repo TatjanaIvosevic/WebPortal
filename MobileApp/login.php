@@ -1,26 +1,5 @@
-<?php
-session_start();
-require "db_config.php";
-
-if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
-    $query = mysqli_query ($conn,$sql);
-
-    if($row = mysqli_num_rows($query) == 1) {
-        echo "Login successful!";
-        $_SESSION['username'] = $username;
-        header('Location: adminpanel.php');
-    } else {
-        echo "Login failed!";
-        header('Location: admin.php');
-    }
-}
-?>
+<?php ?>
 <body>
-<?php include_once "includes/header.php";?>
     <div class="container">
         <div class="row my-5">
             <div class="col-sm-12">

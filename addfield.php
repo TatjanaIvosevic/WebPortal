@@ -1,14 +1,10 @@
 <?php
-
-/*session_start();
+session_start();
 require "db_config.php";
-if(!isset($_SESSION['id'])){
+if(!isset($_SESSION['username'])) {
     header('Location: registration.php');
     exit;
 }
-
-echo "Hello ".$_SESSION['username'];
-*/
 ?>
 <?php include_once "includes/header.php"; ?>
 <body>
@@ -21,52 +17,66 @@ echo "Hello ".$_SESSION['username'];
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12 mt-md-2">
-                           <!-- ADD IMAGE -->
-                            <form class="px-4 py-3" action="upload_images.php" method="post" enctype="multipart/form-data">
+                           <!-- FORM -->
+                            <form class="px-4 py-3" action="addfield.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="courtName">Ime terena:</label>
-                                    <input type="text" class="form-control" name="courtName" id="courtName" required><br>
+                                    <label for="image">Izaberi sliku:</label>
+                                    <input type="file" class="form-control" name="image" required><br>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="courtAddress">Opis terena:</label>
-                                    <input type="text" class="form-control" name="courtAddress" id="courtAddress" required><br>
+                                    <label for="title">Ime terena:</label>
+                                    <input type="text" class="form-control" name="title" required><br>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="description">Opis terena:</label>
+                                    <input type="text" class="form-control" name="description" required><br>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="fileToUpload">Izaberi sliku:</label>
-                                    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload"required><br>
+                                    <label for="address">Adresa terena:</label>
+                                    <input type="text" class="form-control" name="address" required><br>
                                 </div>
 
                                 <input type="submit" class="btn btn-primary" value="Dodaj teren" name="submit">
+
                                 <?php
-                                if(isset($_POST['submit'])){
-                                    if(getimagesize($_FILES['image']['tmp_name'])==FALSE)
-                                    {
-                                        echo " error ";
+                                    if(isset($_POST['submit'])) {
+                                        $image = $_FILES['image'];
+                                        $title = $_POST['title'];
+                                        $description = $_POST['description'];
+                                        $address = $_POST['address'];
+
+                                        if (!exif_imagetype($_FILES['image']['tmp_name'])) {
+                                            echo "Došlo je do problema sa slanjem slike, pokušajte ponovo.";
+                                            exit;
+                                        } else {
+                                            $image = $_FILES['image']['tmp_name'];
+                                            $path = 'assets/images/fields';
+                                            $imageArray = explode('.',$_FILES['image']['name']);
+                                            $imageExtension = end($imageArray);
+                                            $databaseName = time().'.'.$imageExtension;
+                                            $uploadPath = $path.'/'.$databaseName;
+                                            $upload = move_uploaded_file($_FILES['image']['tmp_name'],$uploadPath);
+                                            if(!$upload) {
+                                                echo "Došlo je do problema sa slanjem slike, pokušajte ponovo.";
+                                                exit;
+                                            }
+                                            $sql = "INSERT INTO field (image, title, description, address) VALUES ('$databaseName', '$title', '$description', '$address')";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if ($result) {
+                                                echo "<br>";
+                                                echo "Hvala Vam, što doprinosite zajednici košarkaša u Subotici.
+                                                Podaci su uspešno poslati i nakon provere, biće postavljeni na sajt. :) ";
+                                            } else {
+                                                echo "Došlo je do problema...Molimo Vas, pokušajte kasnije.";
+                                                header('Location: addfield.php');
+                                            }
+                                        }
                                     }
-                                    else
-                                    {
-                                        $image = $_FILES['image']['tmp_name'];
-                                        $image = addslashes(file_get_contents($image));
-                                        saveimage($image);
-                                    }
-                                }
-                                function saveimage($image)
-                                {
-                                    global $conn;
-                                    $qeury="insert into field (image) values ('$image')";
-                                    $result=mysqli_query( $conn,$qeury);
-                                    if($result)
-                                    {
-                                        echo " <br/>Image uploaded.";
-                                        header('location:WebPortal/index.php');
-                                    }
-                                    else
-                                    {
-                                        echo " error ";
-                                    }
-                                }
                                 ?>
                             </form>
 
@@ -76,7 +86,7 @@ echo "Hello ".$_SESSION['username'];
                                 <p>Preuzimanjem naše aplikacije, imate mogućnost ekskluzivnog pregleda svih eventova, koji se odigravaju na terenima u Subotici.</p>
                                 <p>Preuzmite besplatnu aplikaciju: <a href="downloadapp"> 🏀 PlayBasket</a></p>
                             </div>
-
+                            <a href="logout.php">Odjavi se!</a>
                         </div>
                     </div>
                 </div>

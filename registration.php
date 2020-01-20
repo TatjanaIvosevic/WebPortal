@@ -1,5 +1,7 @@
-<?php require "db_config.php"; ?>
-<?php include_once "includes/header.php"; ?>
+<?php
+require "db_config.php";
+ include_once "includes/header.php"; ?>
+
 <body>
 <?php include_once "includes/navbar.php"; ?>
 <div class="container">
