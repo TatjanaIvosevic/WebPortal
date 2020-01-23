@@ -84,6 +84,8 @@
 
 <script src="assets/lib/jquery/dist/jquery.js"> </script>
 <script src="assets/lib/bootstrap/dist/js/bootstrap.js"> </script>
+<script src="assets/lib/star-rating-svg/src/jquery.star-rating-svg.js"></script>
+<script src="assets/js/app.js"></script>
 <?php
 if(isset($_GET['error'])) {
         ?>

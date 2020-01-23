@@ -12,6 +12,7 @@
     <title>Jervolimobasket</title>
 
     <!--CSS-->
+    <link rel="stylesheet" href="assets/lib/star-rating-svg/src/css/star-rating-svg.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
 

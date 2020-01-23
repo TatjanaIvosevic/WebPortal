@@ -1,4 +1,6 @@
-<?php include_once "includes/header.php";
+<?php
+session_start();
+include_once "includes/header.php";
 require_once "db_config.php"; ?>
 <body>
 <?php include_once "includes/navbar.php"; ?>
@@ -21,6 +23,12 @@ require_once "db_config.php"; ?>
                                 <h5 class="card-title"><?= $result['title'] ?></h5>
                                 <p class="card-text"><?= $result['description'] ?></p>
                                 <p class="card-text"><a class="text-warning" href="https://www.google.com/maps?q=<?= $result['latitude']?>,<?= $result['longitude']?>" target="_blank">Klikni da saznaš lokaciju</a></p>
+                                <?php
+                                    if(isset($_SESSION['id'])) {
+                                        echo "<div class=\"rating\" field-id=\"{$result['id']}\" data-rating=\"{$result['rating']}\"></div>";
+                                    }
+                                ?>
+                                <p id="message-<?= $result['id'] ?>"></p>
                             </div>
                         </div>
                     </div>
@@ -30,5 +38,7 @@ require_once "db_config.php"; ?>
         </div>
     </div>
 </div>
-<?php include_once "includes/footer.php"; ?>
+<?php
+include_once "includes/footer.php";
+?>
 </body>

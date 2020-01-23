@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "db_config.php";
-if(!isset($_SESSION['username'])) {
+if(!isset($_SESSION['admin_id'])) {
     header('Location: admin.php');
     exit;
 }

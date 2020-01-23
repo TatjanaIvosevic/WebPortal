@@ -11,6 +11,7 @@ if(isset($_POST['submit'])){
 
     if($row = mysqli_num_rows($query) == 1) {
         echo "Login successful!";
+        $_SESSION['admin_id'] = 1;
         $_SESSION['username'] = $username;
         header('Location: adminpanel.php');
     } else {

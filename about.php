@@ -1,12 +1,8 @@
 <?php include 'db_config.php';?>
 <?php
     // Fetch the marker info from the database
-    $sql = "SELECT * FROM field";
+    $sql = "SELECT * FROM field WHERE status = 1";
     $query = mysqli_query($conn,$sql);
-
-    // Fetch the info-window data from the database
-    $sql2 = "SELECT title, description, latitude, longitude FROM field";
-    $query2 = mysqli_query($conn, $sql2);
 ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPpu2pHwZMCduYt7Pf_2_Ty_RS1k4QG40"></script>
@@ -55,13 +51,13 @@
                 <div class="col-sm-6 col-md-6 col-xl-6 card-body text-center float-left">
                     <img class="img-responsive img-thumbnail" alt="Tatjana Ivošević" src="assets/images/tatjana.jpg">
                         <p>Tatjana Ivošević - Miss IT<br>
-                            <i>tatjana.ivosevic1@gmail.com</i>
+                            <a href="mailto: tatjana.ivosevic1@gmail.com">tatjana.ivosevic1@gmail.com</a>
                         </p>
                 </div>
                 <div class="col-sm-6 col-md-6 col-xl-6 card-body text-center float-right">
                     <img class="img-fluid img-thumbnail" alt="Filip Šuput" src="assets/images/filip.jpg">
                         <p>Filip Šuput - Baller<br>
-                            <i>f.suput98@gmail.com</i>
+                            <a href="mailto: f.suput98@gmail.com">f.suput98@gmail.com</a>
                         </p>
                 </div>
             </div>
