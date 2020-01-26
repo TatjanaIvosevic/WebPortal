@@ -1,0 +1,22 @@
+{
+  "systemParams": "win32-x64-64",
+  "modulesFolders": [
+    "assets\\lib"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "@fortawesome/fontawesome-free@^5.11.2",
+    "bootstrap@^4.3.1",
+    "jquery@^3.4.1",
+    "star-rating-svg@^3.5.0"
+  ],
+  "lockfileEntries": {
+    "@fortawesome/fontawesome-free@^5.11.2": "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.11.2.tgz#8644bc25b19475779a7b7c1fc104bc0a794f4465",
+    "bootstrap@^4.3.1": "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac",
+    "jquery@^3.4.1": "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2",
+    "star-rating-svg@^3.5.0": "https://registry.yarnpkg.com/star-rating-svg/-/star-rating-svg-3.5.0.tgz#72b147015a433da63153fb607af6d51c7c1ea364"
+  },
+  "files": [],
+  "artifacts": {}
+}

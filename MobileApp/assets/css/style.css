@@ -1,0 +1,18 @@
+@import "../lib/bootstrap/dist/css/bootstrap.min.css";
+@import "../lib/@fortawesome/fontawesome-free/css/all.min.css";
+
+* {
+    font-family: 'Staatliches', cursive;
+}
+
+a.nav-link {
+    font-size: 30px;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+

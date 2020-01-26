@@ -1,7 +1,13 @@
 <?php
+session_start();
 require "db_config.php";
- include_once "includes/header.php"; ?>
 
+ if(isset($_SESSION['id'])){
+     header('Location: addfield.php');
+     exit;
+ }
+ ?>
+<?php include_once "includes/header.php"; ?>
 <body>
 <?php include_once "includes/navbar.php"; ?>
 <div class="container">
@@ -108,12 +114,6 @@ require "db_config.php";
                                                     <input type="password" class="form-control" name="password" id="exampleDropdownFormPassword1" placeholder="Sifra" maxlength="20" minlength="5" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                                        <label class="form-check-label" for="dropdownCheck">
-                                                            Zapamti me
-                                                        </label>
-                                                    </div>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Uloguj se</button>
                                                 <?php

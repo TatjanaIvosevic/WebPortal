@@ -1,49 +1,74 @@
 <?php
-include_once 'db_config.php';
+   include_once 'db_config.php';
 
-	if (isset($_GET['edit'])) {
-        $id = $_GET['edit'];
-        $update = true;
+   if(isset($_GET['id'])) {
+       // header('Location:adminpanel.php');
+       // exit;
 
-        $sql = "SELECT * FROM field WHERE id=$id";
-        $query = mysqli_query($conn, $sql);
 
-        if (count($query) == 1 ) {
-            $n = mysqli_fetch_array($query);
-            $status = $n['status'];
-            $latitude = $n['latitude'];
-            $longitude = $n['longitude'];
-        }
-    }
-	?>
+       $id = (int)mysqli_real_escape_string($conn, $_GET['id']);
+
+       $sql = "SELECT * FROM field WHERE id = $id";
+       $query = mysqli_query($conn, $sql);
+       $result = mysqli_fetch_assoc($query);
+
+       if (!$result) {
+           echo 'Nema rezultata';
+           exit;
+       }
+   }
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>UPDATE DATA</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
 <body>
 
-    <!-- newly added field -->
-    <input type="hidden" name="id" value="<?php echo '$id;' ?>">
+<form action="edit.php" method="POST">
 
-    <!-- modified form fields -->
-    <input type="text" name="name" value="<?php echo '$status;' ?>">
-    <input type="text" name="address" value="<?php echo '$latitude;' ?>">
-    <input type="text" name="address" value="<?php echo '$longitude;' ?>">
+    <input type="hidden" name="id" value="<?= $result['id'] ?>" required><br><br>
 
-    <?php if ($update == true): ?>
-        <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
-    <?php else: ?>
-        <button class="btn" type="submit" name="save" >Save</button>
-    <?php endif ?>
+    Status:<input type="text" name="status" value="<?= $result['status'] ?>" required><br><br>
 
-    <?php
-    if (isset($_POST['update'])) {
-        $id = $_POST['id'];
-        $status = $_POST['status'];
-        $latitude = $_POST['latitude'];
-        $longitude = $_POST['longitude'];
+    Latitude:<input type="text" name="latitude" value="<?= $result['latitude'] ?>" required><br><br>
 
-        $sq1 = "UPDATE field SET status='$status', latitude='$latitude', longitude='$longitude' WHERE id=$id";
-        $query1 = mysqli_query($conn,$sql1);
+    Longitude:<input type="text" name="longitude" value="<?= $result['longitude'] ?>" required><br><br>
 
-        $_SESSION['message'] = "Status postavljen na 1, adresa ažurirana";
+    <input type="submit" name="edit" value="Update Data">
+
+</form>
+<?php
+if(isset($_POST['edit'])){
+    $id = mysqli_real_escape_string($conn, $_POST['id']);
+    $status = mysqli_real_escape_string($conn, $_POST['status']);
+    $latitude = mysqli_real_escape_string($conn, $_POST['latitude']);
+    $longitude = mysqli_real_escape_string($conn, $_POST['longitude']);
+
+    $sql = "UPDATE field SET status = $status, latitude = $latitude, longitude = $longitude WHERE id = $id";
+    $query = mysqli_query($conn, $sql);
+
+    if($query){
+        echo 'Polja izmenjena';
         header('Location: adminpanel.php');
-        }
-    ?>
+        exit;
+    } else {
+        echo 'Polja nisu izmenjena';
+    }
+}
+?>
+
 </body>
+
+
+</html>

@@ -21,15 +21,15 @@ include_once "includes/header.php";
                             $result = mysqli_query($conn, $sql);
                             ?>
 
-                            <form action=""method="post">
-                                <table class="table" action="admin.php" method="post" enctype="multipart/form-data">
+                            <form action=""method="POST">
+                                <table class="table" action="admin.php" method="POST" enctype="multipart/form-data">
                                     <thead>
                                         <tr>
                                             <th scope="col">id</th>
                                             <th scope="col">Slika terena</th>
                                             <th scope="col">Ime terena</th>
                                             <th scope="col">Opis terena</th>
-                                            <th scope="col">Promeni status</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Adresa</th>
                                             <th scope="col">Geografska širina</th>
                                             <th scope="col">Geografska dužina</th>
@@ -47,8 +47,8 @@ include_once "includes/header.php";
                                                 <td> " . $row['address'] . "</td>
                                                 <td> " . $row['latitude'] . "</td>
                                                 <td> " . $row['longitude'] . "</td>
-                                                <td> " . "<a href='edit.php?id={$row['id']};'>Edit</a>" ."</td>
-                                                <td> " . "<a href='delete.php?id={$row['id']};'>Delete</a>" ."</td>
+                                                <td> " . "<a href='edit.php?id={$row['id']}'>Edit</a>" ."</td>
+                                                <td> " . "<a href='delete.php?id={$row['id']}'>Delete</a>" ."</td>
                                                 </tr>";
                                             }
                                         ?>

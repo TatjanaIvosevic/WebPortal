@@ -1,7 +1,6 @@
 <?php
 
 require_once 'db_config.php';
-require_once 'functions.php';
 
 $code = mysqli_real_escape_string($conn, trim($_GET['code']));
 $sql = "SELECT * FROM user WHERE verification_code = '$code'";
