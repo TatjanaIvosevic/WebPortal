@@ -18,7 +18,7 @@ if(isset($_SESSION['id'])){
                         <div class="col-sm-12 mt-md-2">
                             <form class="px-4 py-3" action="login_inc.php" method="POST" enctype="multipart/form-data">
                                 <h1 class="text-center"> Uloguj se </h1>
-                                <p class="text-center">Ukoliko nemaš nalog na našem sajtu, savetujemo ti da odeš na<a href="http://jervolimobasket.tatjana.tech" target="_blank"> naš sajt </a> i registruješ se 😊 </p>
+                                <p class="text-center">Ukoliko nemaš nalog na našem sajtu, savetujemo ti da odeš na<a href="https://jervolimobasket.tatjana.tech" target="_blank"> naš sajt </a> i registruješ se 😊 </p>
                                 <div class="form-group">
                                     <label for="username"> Korisničko ime: </label>
                                     <input type="text" class="form-control" name="username" autocomplete="off">
@@ -29,9 +29,6 @@ if(isset($_SESSION['id'])){
                                 </div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                    <label class="form-check-label" for="dropdownCheck">
-                                        Zapamti me
-                                    </label>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Uloguj se</button>
                                 <?php

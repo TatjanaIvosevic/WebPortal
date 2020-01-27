@@ -84,7 +84,7 @@ if(!isset($_SESSION['username'])) {
                             <div class="col-sm-12 text-center">
                                 <h2>~ IMAMO I MOBILNU APLIKACIJU ~</h2>
                                 <p>Preuzimanjem naše aplikacije, imate mogućnost ekskluzivnog pregleda svih eventova, koji se odigravaju na terenima u Subotici.</p>
-                                <p>Preuzmite besplatnu aplikaciju: <a href="downloadapp"> 🏀 PlayBasket</a></p>
+                                <p>Preuzmite besplatnu aplikaciju: <a href="https://jervolimobasket.tatjana.tech/jervolimobasket.apk"> 🏀 PlayBasket</a></p>
                             </div>
                             <a href="logout.php">Odjavi se!</a>
                         </div>

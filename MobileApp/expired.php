@@ -8,13 +8,13 @@ if(!isset($_SESSION['username'])) {
 <?php include_once "header.php"; ?>
 <body>
 <div class="container">
+    <h5> Događaji koje ste propustili...</h5>
     <?php
     $sql = "SELECT * FROM events WHERE date_time < NOW()";
     $query = mysqli_query($conn, $sql) or die($conn);
     $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
     foreach ($results as $result) {?>
-        <h5> Događaji koje ste propustili...</h5>
         <div class="card mb-3">
             <div class="row no-gutters">
                 <div class="col-12 col-md-12 col-xl-12">

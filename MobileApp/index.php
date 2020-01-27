@@ -7,7 +7,7 @@ if(!isset($_SESSION['username'])) {
 } ?>
 <?php include_once 'header.php'; ?>
 <body>
-<div>
+    <div>
         <ul class="nav nav-pills nav-fill mb-3 bg-warning" id="pills-tab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="pills-events-tab" data-toggle="pill" href="#events" role="tab" aria-controls="events" aria-selected="true"><i class="far fa-calendar-check"></i></a>
@@ -24,7 +24,7 @@ if(!isset($_SESSION['username'])) {
             <div class="tab-pane fade" id="favorites" role="tabpanel" aria-labelledby="pills-favorites-tab"><?php include_once 'favorites.php'; ?></div>
             <div class="tab-pane fade" id="expired" role="tabpanel" aria-labelledby="pills-expired-tab"><?php include_once 'expired.php'; ?>
         </div>
-</div>
+    </div>
 
     <script src="assets/lib/jquery/dist/jquery.min.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>

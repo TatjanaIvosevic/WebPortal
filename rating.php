@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if(isset($_SESSION['id'])) {
     require_once 'db_config.php';
     $field_id = mysqli_real_escape_string($conn,$_POST['id']);

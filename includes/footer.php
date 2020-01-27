@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer bg-dark pt-4 <?= $bottom ?? ''?>" style="position: absolute; width: 100%; margin-top: -10px;">
+<footer class="page-footer bg-dark pt-4 mt-5 <?= $bottom ?? ''?>" style="position: absolute; width: 100%; margin-top: -10px;">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">

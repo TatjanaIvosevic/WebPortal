@@ -10,11 +10,11 @@ require "db_config.php";
 <?php include_once "includes/header.php"; ?>
 <body>
 <?php include_once "includes/navbar.php"; ?>
-<div class="container">
+<div class="container mb-5">
     <div class="row my-5">
         <div class="col-sm-12">
             <!-- CARD -->
-            <div class="card mt-5">
+            <div class="card my-5 ">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12 text-center mt-md-2">
@@ -128,8 +128,6 @@ require "db_config.php";
                                                 }
                                                 ?>
                                             </form>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Zaboravio/la si lozinku?</a>
                                         </div>
                                     </div>
                                 </div>
@@ -141,8 +139,9 @@ require "db_config.php";
         </div>
     </div>
 </div>
+
 <?php
-    $bottom = 'fixed-bottom';
     include_once "includes/footer.php";
 ?>
+
 </body>

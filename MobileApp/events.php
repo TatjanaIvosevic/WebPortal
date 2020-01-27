@@ -26,7 +26,10 @@ if(!isset($_SESSION['username'])) {
                                  <i class=" text-info"><?= date("d/m/Y H:i", strtotime($result['date_time'])) ?></i>
                             </div>
                             <div class="card-footer text-center bg-danger">
-                                <button type="submit" class="btn btn-danger btn-block text-white">Zainteresovan/a sam</button>
+                                <form method="POST" action="favorites_inc.php">
+                                    <input type="hidden" name="id" value="<?= $result['id'] ?>">
+                                    <button type="submit"class="btn btn-danger btn-block text-white">Zainteresovan/a sam</button>
+                                </form>
                             </div>
                         </div>
                     </div>
