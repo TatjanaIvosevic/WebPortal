@@ -2,8 +2,6 @@
    include_once 'db_config.php';
 
    if(isset($_GET['id'])) {
-       // header('Location:adminpanel.php');
-       // exit;
 
 
        $id = (int)mysqli_real_escape_string($conn, $_GET['id']);

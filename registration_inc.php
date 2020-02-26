@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if($result){
         $header = "";
-        $header.="From: ROOT <root@vts.su.ac.rs>\n";
+        $header.="From: ROOT x<root@vts.su.ac.rs>\n";
         $header.="X-Mailer: PHP\n";
         $header.="X-Priority: 1\n";
         $header.="Content-Type: text/html; charset=UTF-8\n";
